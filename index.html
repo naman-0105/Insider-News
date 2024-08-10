@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav-margin">
+        <div class="flex">
+            <img src="./assets/Insider.png" class="logo-img" loading="lazy" alt="Insider News">
+            <p class="logo-heading">Insider News</p>
+            <div class="searh-bar flex">
+                <input type="text" class="news-input" id="search-text" placeholder="e.g. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+        <hr class="new1">
+        <div class="container nav-links">
+            <ul class="flex-nav" type="none">
+                <a href="" onclick="reload()" class="hover-link nav-item">
+                    <p>Home</p>
+                </a>
+                <li class="hover-link nav-item" id="health" onclick="onNavItemClick('health')">Health</li>
+                <li class="hover-link nav-item" id="science" onclick="onNavItemClick('science')">Science</li>
+                <li class="hover-link nav-item" id="business" onclick="onNavItemClick('business')">Business</li>
+                <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                <li class="hover-link nav-item" id="world" onclick="onNavItemClick('world')">World</li>
+                <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                <li class="hover-link nav-item" id="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</li>
+                <li class="hover-link nav-item" id="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</li>
+                <li class="hover-link nav-item" id="education" onclick="onNavItemClick('education')">Education</li>
+            </ul>
+        </div>
+        <hr class="new2">
+    </nav>
+    
+    <main>
+        <div class="carousel-container" id="carousel-container">
+        
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1588741068086-caf60b2ff8ef?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" class="carousel-image">
+                        <div class="carousel-text"><a href="https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/good-news-for-team-india-hardik-pandya-the-bowler-arrives/articleshow/109912703.cms"><u>Google is buying minority stake in Walmart-owned Flipkart</u></a></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://img.theweek.in/content/dam/week/magazine/theweek/current/images/2023/3/10/38-S-Somanath.jpg" alt="Image 2" class="carousel-image">
+                        <div class="carousel-text"><a href="https://timesofindia.indiatimes.com/business/india-business/start-investing-more-isro-chief-tells-big-industries-us-ambassador-pushes-for-enhanced-collaboration/articleshow/110395855.cms"><u>Start investing more, Isro chief tells big industries; US Ambassador pushes for enhanced collaboration</u></a></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://y20india.in/wp-content/uploads/2024/04/ipl-2024-schedule-detail.webp" alt="Image 3" class="carousel-image">
+                        <div class="carousel-text"><a href="https://timesofindia.indiatimes.com/sports/cricket/ipl/top-stories/ipl-2024-final-four-unmissable-facts-headlined-by-rare-chance-of-an-australian-hat-trick/articleshow/110413196.cms"><u>IPL 2024 final, KKR vs SRH: Four unmissable facts headlined by rare chance of an Australian hat-trick</u></a></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.livelaw.in/h-upload/2022/12/02/1600x960_447367-jagdeep-dhankhar.jpegImage 4" alt="Image 4" class="carousel-image">
+                        <div class="carousel-text"><a href="https://timesofindia.indiatimes.com/city/hubballi/india-will-be-a-superpower-by-2047-says-vp-jagdeep-dhankhar/articleshow/108153171.cms"><u>India will be a superpower by 2047, says VP Jagdeep Dhankhar</u></a></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="carousel-image">
+                        <div class="carousel-text"><a href="https://timesofindia.indiatimes.com/business/india-business/top-10-largest-economies-in-the-world-when-will-india-become-3rd-largest-economy-amp-where-do-china-us-germany-rank-check-list/photostory/110340864.cms"><u>Top 10 Largest Economies In The World: When Will India Become 3rd Largest Economy & Where Do China, US, Germany Rank? Check List</u></a></div>
+                    </div>
+                </div>
+                <button class="prev-button">&lt</button>
+                <button class="next-button">&gt</button>
+            </div>
+        </div>
+
+        <div class="cards-container container flex" id="cards-container">
+        
+        </div>
+        <button id="read-more-button" class="read-more-button">Show More</button>
+    </main>
+
+    <div class="bottom-links">
+        <h2><u>EXPLORE MORE</u></h2>
+        <div class="trending-bottom">
+            <div>
+                <h3>TRENDING NOW</h3>
+                <ul type="none">
+                    <li class="hover-link nav-item1 categories" id="election" onclick="onNavItemClick('election')">Election</li>
+                    <li class="hover-link nav-item1 categories" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item1 categories" id="cbse" onclick="onNavItemClick('cbse')">CBSE Result</li>
+                    <li class="hover-link nav-item1 categories" id="worldcup" onclick="onNavItemClick('worldcup')">Cricket World Cup</li>
+                    <li class="hover-link nav-item1 categories" id="meditation" onclick="onNavItemClick('meditation')">Meditation</li>
+                    <li class="hover-link nav-item1 categories" id="pollution" onclick="onNavItemClick('pollution')">Pollution</li>
+                </ul>
+            </div>
+            <div>
+                <h3>HOT ON THE WEB</h3>
+                <ul type="none">
+                    <li class="hover-link nav-item1 categories" id="robotics" onclick="onNavItemClick('robotics')">Robotics</li>
+                    <li class="hover-link nav-item1 categories" id="games" onclick="onNavItemClick('games')">Games</li>
+                    <li class="hover-link nav-item1 categories" id="gadgets" onclick="onNavItemClick('gadgets')">Gadgets</li>
+                    <li class="hover-link nav-item1 categories" id="travel" onclick="onNavItemClick('travel')">Travel</li>
+                    <li class="hover-link nav-item1 categories" id="health" onclick="onNavItemClick('health')">Health</li>
+                    <li class="hover-link nav-item1 categories" id="food" onclick="onNavItemClick('food')">Food</li>
+                </ul>
+            </div>
+            <div>
+                <h3>POPULAR CATEGORIES</h3>
+                <ul type="none">
+                    <li class="hover-link nav-item1 categories" id="sports" onclick="onNavItemClick('sports')">Sports News</li>
+                    <li class="hover-link nav-item1 categories" id="business" onclick="onNavItemClick('business')">Business News</li>
+                    <li class="hover-link nav-item1 categories" id="india" onclick="onNavItemClick('india')">India News</li>
+                    <li class="hover-link nav-item1 categories" id="world" onclick="onNavItemClick('world')">World News</li>
+                    <li class="hover-link nav-item1 categories" id="bollywood" onclick="onNavItemClick('bollywood')">Bollywood News</li>
+                    <li class="hover-link nav-item1 categories" id="cricket" onclick="onNavItemClick('cricket')">Cricket News</li>
+                </ul>
+            </div>
+            <div>
+                <h3>TOP TRENDS</h3>
+                <ul type="none">
+                    <li class="hover-link nav-item1 categories" id="filmfare" onclick="onNavItemClick('filmfare')">Filmfare</li>
+                    <li class="hover-link nav-item1 categories" id="food" onclick="onNavItemClick('food')">Food</li>
+                    <li class="hover-link nav-item1 categories" id="femina" onclick="onNavItemClick('femina')">Femina</li>
+                    <li class="hover-link nav-item1 categories" id="startup" onclick="onNavItemClick('startup')">Startup</li>
+                    <li class="hover-link nav-item1 categories" id="fintech" onclick="onNavItemClick('fintech')">Fintech</li>
+                    <li class="hover-link nav-item1 categories" id="football" onclick="onNavItemClick('football')">Football</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div>
+            <hr class="new3">
+            <img src="./assets/Insider.png" class="bottom-container" loading="lazy" alt="company-logo">
+        </div>
+        <p style="color: rgb(174, 174, 175); text-align: center;">Insider News is a popular online newsportal and going source for technical<br>and digital content for its influential audience around the globe </p>
+       
+        
+    </div>
+
+    <div class="copyright">
+        <p>© 2021 Insider News. All rights reserved.</p>
+    </div>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+</div>
+    
+    <script src="script.js" async></script>
+</body>
+</html>
